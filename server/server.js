@@ -5,6 +5,8 @@ const cors = require("cors");
 
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
+
+const weatherRoutes = require("./routes/weatherRoutes");
 const communityRoutes = require("./routes/communityRoutes");
 
 // ===============================
@@ -37,6 +39,7 @@ app.get("/", (req, res) => {
 // Routes
 // ===============================
 app.use("/api/auth", authRoutes);
+app.use("/api/weather", weatherRoutes);
 app.use("/api/community", communityRoutes);
 
 // ===============================
